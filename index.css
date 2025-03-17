@@ -6,11 +6,8 @@ h1 {
     color: blue;
     font-size: 30px;
 }
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
+a{
+    text-align: center;
 }
 p2{
     text-align: center;
