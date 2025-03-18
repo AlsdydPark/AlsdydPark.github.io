@@ -9,6 +9,14 @@ h1 {
 h4{
     text-align: center;
 }
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+}
+}
 p2{
     text-align: center;
     text-decoration: underline;
