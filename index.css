@@ -1,35 +1,185 @@
+/* 기본 스타일 초기화 및 설정 */
 body {
-    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
-h1 {
+
+h1, h2, h3, h4 {
+    color: #2c3e50;
+}
+
+/* 헤더 및 네비게이션 바 */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+nav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* 메인 콘텐츠 영역 */
+main {
+    padding-top: 80px; /* 고정 헤더 높이만큼 패딩 */
+}
+
+/* 각 섹션 공통 스타일 */
+section {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
     text-align: center;
-    color: blue;
-    font-size: 30px;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
-h4{
+
+/* 홈 섹션 */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 80vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('satellite_bg.jpg') no-repeat center center/cover;
+    color: #fff;
 }
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    height: auto;
+
+#home h1 {
+    font-size: 3rem;
+    color: #fff;
 }
+#home p {
+    font-size: 1.2rem;
 }
-p2{
+
+
+/* 소개 섹션 */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.profile-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-details ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+/* 연구 섹션 */
+#research .research-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* 프로젝트 & 수상 카드 */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h4 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+.card .date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.card.award h4 {
+    color: #e67e22; /* 수상 카드는 다른 색으로 강조 */
+}
+
+/* 푸터 */
+footer {
     text-align: center;
-    text-decoration: underline;
-    color: black;
-    font-size: 20px;
-}
-h2 {
-    text-align: center;
-    color: red;
-    font-size: 20px;
-}
-h3 {
-    text-align: center;
-    color: green;
-    font-size: 20px;
+    padding: 2rem;
+    background: #2c3e50;
+    color: #fff;
 }
